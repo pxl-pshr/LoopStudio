@@ -1,0 +1,43 @@
+{
+ "name": "example",
+ "reference": null,
+ "subject": "",
+ "keep": "Drawn as dark, weird 1990s 16-bit pixel art: chunky square pixels, a small palette of black, deep blue, cyan and blood red, checkerboard dithered shading, crisp hard edges, no smooth gradients, no blur, no text. A plain pitch-black background with nothing else in it.",
+ "he": "It",
+ "his": "its",
+ "base_tags": [
+  "pixel art",
+  "pixel",
+  "8 bit",
+  "16 bit",
+  "retro",
+  "weird",
+  "loop",
+  "dark"
+ ],
+ "output": "loopstudio/example",
+ "data": "example",
+ "pixel": {
+  "grid": 160,
+  "palette": [
+   "#bbf4eb",
+   "#abd8ce",
+   "#87cdb3",
+   "#54beae",
+   "#8c94a1",
+   "#528eaf",
+   "#1692a7",
+   "#a22d3e",
+   "#393e7e",
+   "#233076",
+   "#094c7e",
+   "#0d2967",
+   "#0a0e36",
+   "#6e0105",
+   "#01010a",
+   "#000000"
+  ],
+  "dither": 16
+ },
+ "notes": "Example style subject, no reference image: dark, weird 16-bit pixel-art loops on a black void. Every GIF goes through loop_gifs.pixelate (160 px grid, a fixed 16-colour palette, ordered dithering, scaled up with hard edges). A still composition where only small things flicker or move."
+}

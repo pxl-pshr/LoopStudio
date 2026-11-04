@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+state.json
+config.json
+data/
+.claude/settings.local.json
+# your own subjects stay local; only the bundled example is part of the repo
+skill/subjects/*
+!skill/subjects/example/
+# the example's run data, now kept in its folder
+skill/subjects/example/*.json
+!skill/subjects/example/subject.json
+!skill/subjects/example/concepts.json
+skill/subjects/example/ids.txt

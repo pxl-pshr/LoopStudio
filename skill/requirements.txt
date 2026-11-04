@@ -1,0 +1,2 @@
+# installed into ComfyUI's Python (it already has torch, av, numpy and Pillow): loop metrics in review.py
+opencv-python-headless

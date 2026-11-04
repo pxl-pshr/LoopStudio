@@ -1,0 +1,81 @@
+[
+ {
+  "stem": "fishbowl_head_square_102f_fast_example",
+  "status": "success",
+  "gif": "fishbowl_head_square_102f_fast_00001_.gif",
+  "gif_mb": 0.3,
+  "caption": null,
+  "prompt": "Locked-off static camera, no pan, no zoom. Medium close-up from the chest up of a man in a dark blue suit and red tie sitting perfectly still, facing the camera. Instead of a head he has a round glass fishbowl full of water, and one bright orange goldfish swims in a slow circle inside it while small bubbles rise. His body never moves. Drawn as dark, weird 1990s 16-bit pixel art: chunky square pixels, a small palette of black, deep blue, cyan and blood red, checkerboard dithered shading, crisp hard edges, no smooth gradients, no blur, no text. A plain pitch-black background with nothing else in it. Continuous, smooth, unbroken motion throughout.\n\noverall_soundscape: Gentle bubbling of an aquarium pump.\n\nnon_diegetic_music: N/A",
+  "seed": 1000,
+  "steps": 8,
+  "width": 992,
+  "height": 992,
+  "frames": 102,
+  "minutes": 4.3,
+  "metrics": {
+   "frames": 102,
+   "hitches": 18,
+   "max_speed": 4.08,
+   "worst_pop": 2.49,
+   "seam_pop": 2.84,
+   "seam_speed": 4.08,
+   "seam_vs_clip": 1.25,
+   "flag": true
+  },
+  "tags": [
+   "pixel art",
+   "pixel",
+   "8 bit",
+   "16 bit",
+   "retro",
+   "weird",
+   "loop",
+   "dark",
+   "fishbowl",
+   "goldfish",
+   "surreal",
+   "business"
+  ],
+  "example": true
+ },
+ {
+  "stem": "crt_hand_square_102f_fast_example",
+  "status": "success",
+  "gif": "crt_hand_square_102f_fast_00001_.gif",
+  "gif_mb": 0.5,
+  "caption": null,
+  "prompt": "Locked-off static camera, no pan, no zoom. An old CRT television on the floor of a dark bedroom, its screen full of flickering cyan and blue static from the very first frame. A pale skeletal hand presses against the inside of the glass from within the screen, its fingers slowly flexing and relaxing again and again. The TV itself never moves. Drawn as dark, weird 1990s 16-bit pixel art: chunky square pixels, a small palette of black, deep blue, cyan and blood red, checkerboard dithered shading, crisp hard edges, no smooth gradients, no blur, no text. Continuous, smooth, unbroken motion throughout.\n\noverall_soundscape: Crackle of TV static and a faint high-pitched CRT whine.\n\nnon_diegetic_music: N/A",
+  "seed": 1000,
+  "steps": 8,
+  "width": 992,
+  "height": 992,
+  "frames": 102,
+  "minutes": 10.1,
+  "metrics": {
+   "frames": 102,
+   "hitches": 7,
+   "max_speed": 1.99,
+   "worst_pop": 2.13,
+   "seam_pop": 1.68,
+   "seam_speed": 1.49,
+   "seam_vs_clip": 0.96,
+   "flag": true
+  },
+  "tags": [
+   "pixel art",
+   "pixel",
+   "8 bit",
+   "16 bit",
+   "retro",
+   "weird",
+   "loop",
+   "dark",
+   "tv",
+   "static",
+   "crt",
+   "hand",
+   "creepy"
+  ],
+  "example": true
+ }
+]

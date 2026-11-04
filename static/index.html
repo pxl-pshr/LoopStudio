@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="darkreader-lock"><!-- already dark: dark-mode extensions recolor the splash gradient otherwise -->
+<title>Loop Studio</title>
+<link rel="icon" href="/static/logo/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/vendor/xterm.css">
+<link rel="stylesheet" href="/static/style.css?v=4">
+</head>
+<body>
+<div class="splash" id="splash"><pre class="splash-art">{{BANNER}}</pre><div class="splash-status" id="splash-status">loading…</div></div>
+<header class="top">
+  <div class="brand"><img class="brand-mark" src="/static/logo/wordmark.svg" alt="Loop Studio"></div>
+  <div class="status" id="comfy-status"><span class="pill off">ComfyUI offline</span></div>
+  <div class="job" id="job"></div>
+  <button class="btn ghost" id="settings" title="Settings: folders, outputs, agent">⚙ Settings</button>
+  <button class="btn ghost" id="term-toggle" title="Agent terminal (Ctrl+`)"><span class="kbd">&gt;_</span> <span class="agent-name">Agent</span></button>
+  <div class="progress"><div id="progress-bar"></div></div>
+</header>
+
+<div class="layout">
+  <aside class="side">
+    <div class="side-head">Subjects <button class="icon-btn" id="new-subject" title="New subject">+</button></div>
+    <nav id="subjects"></nav>
+  </aside>
+
+  <main id="main">
+    <div class="empty">Pick a subject, or make a new one.</div>
+  </main>
+</div>
+
+<section class="drawer" id="drawer" hidden>
+  <div class="drawer-grip" id="drawer-grip"></div>
+  <div class="drawer-bar">
+    <span class="drawer-title"><span class="kbd">&gt;_</span> <span class="agent-name">Agent</span> <span class="muted" id="term-state"></span></span>
+    <span class="muted small drawer-hint">runs in the Loop Studio folder</span>
+    <span class="spacer"></span>
+    <span class="dock" id="dock"><button class="icon-btn" data-dock="left" title="Dock left">◧</button><button class="icon-btn" data-dock="bottom" title="Dock bottom">⬓</button><button class="icon-btn" data-dock="right" title="Dock right">◨</button></span>
+    <button class="btn ghost small" id="term-restart">Restart</button>
+    <button class="btn ghost small" id="term-close">Hide</button>
+  </div>
+  <div class="term-wrap">
+    <div id="terminal"></div>
+    <!-- over the terminal until the agent prints something: ConPTY clears the screen at spawn, so it can't live in it -->
+    <div class="term-splash" id="term-splash" hidden><pre class="splash-art"></pre><div class="splash-status" id="term-splash-status"></div></div>
+  </div>
+</section>
+
+<div class="viewer" id="viewer" hidden></div>
+<div class="modal" id="modal" hidden><div class="modal-card" id="modal-card"></div></div>
+<div class="toasts" id="toasts"></div>
+
+<script src="/static/vendor/xterm.js"></script>
+<script src="/static/vendor/addon-fit.js"></script>
+<script src="/static/app.js?v=2"></script>
+</body>
+</html>

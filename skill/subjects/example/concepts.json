@@ -1,0 +1,253 @@
+[
+ {
+  "name": "microwave_eye",
+  "caption": null,
+  "sound": "Low electric hum of a microwave, a soft rattle each time the plate turns.",
+  "tags": [
+   "microwave",
+   "eyeball",
+   "creepy",
+   "cursed"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. An old beige microwave floating in pitch-black darkness, its door window glowing yellow. Inside, a single huge bloodshot eyeball sits on the glass turntable and turns round and round, its iris always swinging back to stare at the camera. The microwave light flickers softly. Everything else is perfectly still. {keep}"
+ },
+ {
+  "name": "moth_bulb",
+  "caption": null,
+  "sound": "Buzzing of a bare light bulb and the soft papery flutter of moth wings.",
+  "tags": [
+   "moth",
+   "lamp",
+   "light",
+   "night"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A pitch black room with one bare light bulb hanging dead centre on a cord. A huge pale moth with glowing red eyes circles the bulb in a steady loop, passing in front of it and behind it again and again. The bulb's glow pulses slightly. The cord does not move. {keep}"
+ },
+ {
+  "name": "fishbowl_head",
+  "caption": null,
+  "sound": "Gentle bubbling of an aquarium pump.",
+  "tags": [
+   "fishbowl",
+   "goldfish",
+   "surreal",
+   "business"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. Medium close-up from the chest up of a man in a dark blue suit and red tie sitting perfectly still, facing the camera. Instead of a head he has a round glass fishbowl full of water, and one bright orange goldfish swims in a slow circle inside it while small bubbles rise. His body never moves. {keep}"
+ },
+ {
+  "name": "ramen_worms",
+  "caption": null,
+  "sound": "Steam hissing softly and a wet squirming sound.",
+  "tags": [
+   "ramen",
+   "worms",
+   "gross",
+   "food",
+   "cursed"
+  ],
+  "visual": "Locked-off static camera, top-down close-up of a bowl of ramen in pitch-black darkness. The bowl stays perfectly still and full from the very first frame. The noodles are pale worms that wriggle and squirm in place without leaving the bowl, a boiled egg with a blue eye for a yolk stares up at the camera, thin wisps of steam rise. {keep}"
+ },
+ {
+  "name": "crt_hand",
+  "caption": null,
+  "sound": "Crackle of TV static and a faint high-pitched CRT whine.",
+  "tags": [
+   "tv",
+   "static",
+   "crt",
+   "hand",
+   "creepy"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. An old CRT television alone in pitch-black darkness, its screen full of flickering cyan and blue static from the very first frame. A pale skeletal hand presses against the inside of the glass from within the screen, its fingers slowly flexing and relaxing again and again. The TV itself never moves. {keep}"
+ },
+ {
+  "name": "candle_skull",
+  "caption": null,
+  "sound": "Quiet crackle of a candle flame and wind outside.",
+  "tags": [
+   "skull",
+   "candle",
+   "spooky",
+   "halloween"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A human skull sits dead centre on a stack of old books in pitch-black darkness, a candle burning on top of its head with wax already dripping down over its eye sockets from the very first frame. The small flame flickers and the jaw slowly opens and closes in a silent laugh, again and again. {keep}"
+ },
+ {
+  "name": "candle_skull_v2",
+  "caption": null,
+  "sound": "A candle flame roaring and a dry rattling cackle of clacking teeth.",
+  "tags": [
+   "skull",
+   "candle",
+   "spooky",
+   "halloween",
+   "laughing"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A grinning human skull sits dead centre in pitch-black darkness, a tall candle burning on top of its head, white wax already frozen in drips down over its eye sockets from the very first frame. The candle flame is big and flickers wildly, and the skull's lower jaw chatters open and shut fast like it is laughing hysterically, nonstop. Only the flame and the jaw move. {keep}"
+ },
+ {
+  "name": "ramen_worms_v2",
+  "caption": null,
+  "sound": "Wet squelching and squirming, steam hissing.",
+  "tags": [
+   "ramen",
+   "worms",
+   "gross",
+   "food",
+   "cursed"
+  ],
+  "visual": "Locked-off static camera, top-down close-up of a bowl of ramen in pitch-black darkness, the bowl filling most of the frame. The bowl is packed with fat pale pink worms instead of noodles, and every worm writhes and squirms constantly, coiling and uncoiling in place, the whole nest visibly churning without any worm leaving the bowl. A boiled egg half with a blue eyeball for a yolk sits on top, staring at the camera. Thin steam rises. {keep}"
+ },
+ {
+  "name": "cat_void_mouth",
+  "caption": null,
+  "sound": "A deep cosmic hum and a low purr.",
+  "tags": [
+   "cat",
+   "black cat",
+   "space",
+   "void",
+   "cursed"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A black cat sits perfectly still dead centre, facing the camera, its mouth stretched impossibly wide open from the very first frame. Inside its mouth is a swirling vortex of stars and galaxies that spins round and round endlessly. The cat's glowing cyan eyes slowly blink once. Its body never moves. {keep}"
+ },
+ {
+  "name": "fingertip_eyes",
+  "caption": null,
+  "sound": "Soft wet blinking clicks.",
+  "tags": [
+   "hand",
+   "eyes",
+   "creepy",
+   "blink"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A pale open hand stands upright dead centre, palm facing the camera, fingers spread wide and perfectly still from the very first frame. Every fingertip has a small human eye in it, and the five eyes blink one after another out of sync and dart their gaze around, over and over. {keep}"
+ },
+ {
+  "name": "tooth_spider",
+  "caption": null,
+  "sound": "Tiny clicking skittering legs.",
+  "tags": [
+   "tooth",
+   "spider",
+   "dentist",
+   "gross",
+   "creepy"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A giant white human molar tooth with bloody roots stands dead centre on eight long hairy black spider legs. It stays in place and its legs skitter and twitch nonstop, tapping up and down in a fast cycle, while the tooth bobs slightly. It never walks away. {keep}"
+ },
+ {
+  "name": "heart_jar",
+  "caption": null,
+  "sound": "A slow wet heartbeat thumping and bubbling liquid.",
+  "tags": [
+   "heart",
+   "jar",
+   "anatomy",
+   "beating",
+   "creepy"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A glass pickle jar full of glowing green liquid sits dead centre. Inside floats a red anatomical human heart that beats steadily, squeezing and swelling again and again, small bubbles rising from it the whole time. The jar never moves. {keep}"
+ },
+ {
+  "name": "grinning_sun",
+  "caption": null,
+  "sound": "A low droning choir hum.",
+  "tags": [
+   "sun",
+   "smile",
+   "teeth",
+   "creepy",
+   "weird"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A huge pale sun fills the middle of the frame with a wide human grin full of square white teeth and two small wide-open human eyes. Its spiky rays rotate slowly round and round, its eyes dart left and right, and its grin never changes. {keep}"
+ },
+ {
+  "name": "slot_eyes",
+  "caption": null,
+  "sound": "Mechanical whirring reels and a ringing bell.",
+  "tags": [
+   "slot machine",
+   "casino",
+   "eyes",
+   "gamble",
+   "jackpot"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. An old one-armed bandit slot machine stands dead centre, its lights blinking. Its three reels spin fast and endlessly, blurring with eyeballs, teeth and little skulls, never stopping. The machine itself never moves. {keep}"
+ },
+ {
+  "name": "weeping_angel",
+  "caption": null,
+  "sound": "Dripping liquid and a mournful wind.",
+  "tags": [
+   "angel",
+   "statue",
+   "crying",
+   "tears",
+   "sad"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A grey stone angel statue, chest up, dead centre, its wings folded behind it and its face perfectly still. Thick black tar tears stream nonstop from both of its eyes and run down its cheeks in steady flowing lines that are already there from the very first frame. {keep}"
+ },
+ {
+  "name": "breathing_mushroom",
+  "caption": null,
+  "sound": "Heavy slow wheezing breaths.",
+  "tags": [
+   "mushroom",
+   "face",
+   "breathing",
+   "trippy"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A small red-capped mushroom with a tiny wrinkled old man's face on its stem sits dead centre. It breathes in and out heavily, its cap swelling up and shrinking back down with each breath, its eyes squinting, over and over. {keep}"
+ },
+ {
+  "name": "ufo_cow",
+  "caption": null,
+  "sound": "A warbling electronic hum and a distant moo.",
+  "tags": [
+   "ufo",
+   "cow",
+   "alien",
+   "abduction"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A small flying saucer hovers at the top of the frame, its lights blinking in a circle, shining a pale cyan beam straight down. A black and white cow floats inside the beam in the middle of the frame, slowly bobbing up and down and turning round in place, legs dangling, never rising out of the beam. {keep}"
+ },
+ {
+  "name": "haunted_vending",
+  "caption": null,
+  "sound": "A buzzing fluorescent hum and a soft clunk.",
+  "tags": [
+   "vending machine",
+   "soda",
+   "haunted",
+   "eye"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. An old soda vending machine stands dead centre, its front glowing with flickering light. In the middle of its glowing front a single large eye opens, looks left, looks right, and closes again, over and over. The machine itself never moves. {keep}"
+ },
+ {
+  "name": "slot_eyes_v2",
+  "caption": null,
+  "sound": "Mechanical whirring reels and a ringing bell.",
+  "tags": [
+   "slot machine",
+   "casino",
+   "eyes",
+   "gamble",
+   "jackpot"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A plain old one-armed bandit slot machine stands dead centre, a blank unmarked metal body with no signs, no letters and no numbers anywhere on it, its round bulbs blinking. Its three reels fill the middle of the machine and spin fast and endlessly, blurring with eyeballs, teeth and little skulls, never stopping. The machine itself never moves. {keep}"
+ },
+ {
+  "name": "haunted_vending_v2",
+  "caption": null,
+  "sound": "A buzzing fluorescent hum and a soft clunk.",
+  "tags": [
+   "vending machine",
+   "soda",
+   "haunted",
+   "eye"
+  ],
+  "visual": "Locked-off static camera, no pan, no zoom. A plain blank vending machine with no logo, no labels and no writing anywhere stands dead centre. Its whole front is one glowing pale panel, and in the middle of it a single huge eye opens, looks left, looks right and closes again, over and over. The machine itself never moves. {keep}"
+ }
+]

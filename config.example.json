@@ -1,0 +1,10 @@
+{
+ "comfy_dir": "C:/AI/ComfyUI",
+ "comfy_python": null,
+ "comfy_url": "http://127.0.0.1:8188",
+ "subjects_dir": "skill/subjects",
+ "data_dir": null,
+ "font": "C:/Windows/Fonts/impact.ttf",
+ "outputs": {"gif": true, "webp": false, "mp4": false, "size": 480, "fps": 12, "captions": true},
+ "agent": {"name": "Claude Code", "command": "claude", "env": {}}
+}
