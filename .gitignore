@@ -4,6 +4,7 @@ __pycache__/
 state.json
 config.json
 data/
+tools/
 .claude/settings.local.json
 # your own subjects stay local; only the bundled example is part of the repo
 skill/subjects/*

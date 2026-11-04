@@ -49,6 +49,18 @@ DOWNLOADS = {
 # custom node packs, for the Install buttons: check key -> (git repo, folder name in custom_nodes)
 NODE_INSTALLS = {"loop": (LOOP_NODE_URL, "ComfyUI-MiniMaxH3-Loop"),
                  "upscale": ("https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler", "Comfyui_Minimax_h3_latent_Upscaler")}
+# gifski, for the Install button: the Windows program in gif.ski's zip, checked against this hash before it's used. It goes
+# in Loop Studio's own tools/ folder, not on PATH. Its .msi (also what winget installs) has no PATH entry, so it isn't used.
+GIFSKI_ZIP = "https://gif.ski/gifski-1.32.0.zip"
+GIFSKI_EXE = "win/gifski.exe"  # in the zip
+GIFSKI_SHA256 = "30c0ad69324c0c3d4d71670be39d34eb626bf15f3a39ab64df874579380298ab"
+TOOLS = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "tools")
+
+
+def gifski():
+    # the gifski to run: one on PATH, else the one the Install button put in tools/; None when there's neither
+    local = os.path.join(TOOLS, "gifski.exe")
+    return shutil.which("gifski") or (local if os.path.isfile(local) else None)
 
 
 def download_url(key):
@@ -57,7 +69,9 @@ def download_url(key):
 
 
 def get_info(key):
-    # how to get a check's file: a model download or a node install, for the app (None: neither, e.g. gifski)
+    # how to get a check's file: a model download, a node install or gifski, for the app (None: none of them)
+    if key == "gifski":
+        return {"kind": "tool", "url": GIFSKI_ZIP}
     if key in DOWNLOADS:
         repo, path, size, folder_type, sub = DOWNLOADS[key]
         return {"kind": "model", "url": download_url(key), "page": f"https://huggingface.co/{repo}", "size": size,
@@ -182,8 +196,10 @@ def check(url, gif=True):
         add("upscale_model", f"Latent upscaler model: {UPSCALER}", False, '"upscale" renders',
             f"Download it ({download_url('upscale_model')}) into ComfyUI/models/latent_upscale_models/; "
             "ComfyUI lists it once the upscaler node is installed.", "ComfyUI lists it once the upscaler node is installed.")
-    add("gifski", "gifski on PATH", shutil.which("gifski"), "GIF output" if gif else "GIF output (off)",
-        "Install gifski (https://gif.ski) and make sure it's on PATH, or turn GIF off in Outputs.")
+    add("gifski", "gifski, which makes the GIFs", gifski(), "GIF output" if gif else "GIF output (off)",
+        f"Press Install in Settings > Requirements, or download {GIFSKI_ZIP} and copy win\\gifski.exe from it to a folder on PATH. "
+        "Or turn GIF off in Outputs.", "No Rust needed. Or turn GIF off in Outputs, below.")
+    items[-1]["core"] = gif  # with GIF on, as it is by default, a render can't finish without it
     return items
 
 

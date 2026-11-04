@@ -8,6 +8,7 @@ progress, and hosts a terminal running your coding agent (config.json "agent"). 
 because the terminal is a real shell.
 """
 import asyncio
+import hashlib
 import html
 import io
 import json
@@ -897,6 +898,31 @@ async def install_node(request):
     return web.json_response({"ok": True, "output": f"Installed {name} in {base}. Restart ComfyUI to load it, then Check again."})
 
 
+async def install_gifski(request):
+    # gifski's Windows program into Loop Studio's tools/ folder, checked against needs.GIFSKI_SHA256 first
+    try:
+        async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=300)) as http:
+            r = await http.get(needs.GIFSKI_ZIP)
+            r.raise_for_status()
+            data = await r.read()
+        await asyncio.to_thread(unpack_gifski, data)
+    except (aiohttp.ClientError, asyncio.TimeoutError, OSError, ValueError, KeyError, zipfile.BadZipFile) as e:
+        return web.json_response({"ok": False, "output": f"Couldn't install gifski from {needs.GIFSKI_ZIP}: {e or type(e).__name__}"})
+    return web.json_response({"ok": True, "output": f"Installed gifski in {needs.TOOLS}."})
+
+
+def unpack_gifski(data):
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        exe = z.read(needs.GIFSKI_EXE)
+    if hashlib.sha256(exe).hexdigest() != needs.GIFSKI_SHA256:
+        raise ValueError("the download doesn't match the gifski this version of Loop Studio expects, so it wasn't installed")
+    os.makedirs(needs.TOOLS, exist_ok=True)
+    path = os.path.join(needs.TOOLS, "gifski.exe")
+    with open(path + ".tmp", "wb") as f:
+        f.write(exe)
+    os.replace(path + ".tmp", path)
+
+
 def unzip_into(data, dest):
     # GitHub's zip holds one top folder (<repo>-<branch>): its contents become dest
     with tempfile.TemporaryDirectory() as tmp, zipfile.ZipFile(io.BytesIO(data)) as z:
@@ -1298,6 +1324,7 @@ def main():
         web.post("/api/downloads", start_fetch),
         web.post("/api/downloads/{key}/cancel", cancel_fetch),
         web.post("/api/install-node", install_node),
+        web.post("/api/install-gifski", install_gifski),
         web.post("/api/open-model-folder", open_model_folder),
         web.get("/media/{name}/{file}", media),
         web.get("/ref/{name}", reference),

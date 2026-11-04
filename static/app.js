@@ -1119,6 +1119,15 @@ async function renderReqs(el) {
       catch (e) { said(e.message, false); }
       b.disabled = false;
     });
+    on(".tool-go", async () => {
+      const b = $(".tool-go", row), out = $(".node-out", row);
+      b.disabled = true; out.textContent = "Downloading gifski…";
+      try {
+        const r = await api("POST", "/api/install-gifski");
+        INSTALL_OUT[i.key] = r.ok ? null : { text: r.output, ok: false };
+      } catch (e) { INSTALL_OUT[i.key] = { text: e.message, ok: false }; }
+      renderReqs(el).catch(e => (el.textContent = e.message));
+    });
     on(".pkg-go", async () => {
       const b = $(".pkg-go", row), out = $(".node-out", row);
       b.disabled = true; out.textContent = "Installing…";
@@ -1156,6 +1165,9 @@ function reqRow(i) {
     get = `<div class="req-get"><button class="btn small node-go">Install</button>
       <a class="small" href="${esc(i.get.git)}" target="_blank" rel="noopener">${esc(i.get.git.replace("https://github.com/", ""))}</a>
       ${installOut}</div>`;
+  } else if (!i.ok && i.get?.kind === "tool") {
+    get = `<div class="req-get"><button class="btn small tool-go">Install</button>
+      <a class="small" href="${esc(i.get.url)}" target="_blank" rel="noopener">direct link</a>${installOut}</div>`;
   } else if (!i.ok && i.get?.kind === "packages") {
     get = `<div class="req-get"><button class="btn small pkg-go">Install</button>${installOut}</div>`;
   }

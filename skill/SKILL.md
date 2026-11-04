@@ -31,7 +31,7 @@ first time), so asking for "another one" renders something new.
 
 - ComfyUI v0.42+ with `custom_nodes/ComfyUI-MiniMaxH3-Loop`; models
   `minimax_h3_ref2va_pruned_int8_convrot`, `qwen3vl_32b_minimax_h3_nvfp4_awq`, H3 video/audio VAEs (in `minimax\` subfolders).
-- `gifski` on PATH (PNG input only) for GIFs; a caption font (Impact by default).
+- `gifski` for GIFs (PNG input only): on PATH, or in Loop Studio's `tools/` folder from Settings > Requirements' Install button; a caption font (Impact by default).
 - `models/loras/minimax/`: `pika_h3_flex_ref2va_v1_bf16` and `H3-Licon-VBVR-I2V`, for the default render.
 - Default render: the stock model with Pika's Ref2VA LoRA and then the VBVR LoRA stacked on it, on the stock sampler
   (25 steps, res_multistep, simple scheduler; not Pika's own 6-step lcm schedule). Our pick so far, on a small sample (all

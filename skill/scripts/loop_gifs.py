@@ -44,7 +44,7 @@ except ImportError:
     av = np = Image = ImageDraw = ImageFont = None
 
 import config
-from needs import CLIP, MODEL_FIELDS, MODELS, PIKA_LORA, UPSCALER, VAE_A, VAE_V, _norm, concept_problem, installed, loras  # model files: see needs.py
+from needs import CLIP, MODEL_FIELDS, MODELS, PIKA_LORA, UPSCALER, VAE_A, VAE_V, _norm, concept_problem, gifski, installed, loras  # model files: see needs.py
 
 SKILL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = config.load()
@@ -413,7 +413,7 @@ def convert(prompt_id, subject=None, concepts=None, redo=False):
         imgs = None
         for out in wanted:
             if out.endswith(".gif"):
-                subprocess.run(["gifski", "--fps", str(fps), "--width", str(width), "--quality", "90", "--quiet", "-o", out, *names],
+                subprocess.run([gifski() or "gifski", "--fps", str(fps), "--width", str(width), "--quality", "90", "--quiet", "-o", out, *names],
                                cwd=frames_dir, check=True)
                 continue
             if imgs is None:

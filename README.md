@@ -16,11 +16,10 @@ coding agent of your choice built into a terminal drawer.
 Windows with an NVIDIA GPU (24 GB recommended) and about 45 GB free for the models.
 
 1. Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.42 or newer, and start it.
-2. Install [Python 3.12 or newer](https://www.python.org/downloads/), and put `gifski.exe` from [gif.ski](https://gif.ski)
-   in a folder on PATH.
+2. Install [Python 3.12 or newer](https://www.python.org/downloads/).
 3. Download this repo and run **`start.bat`**. The browser opens by itself. Pick your ComfyUI folder when it asks.
 4. Open **⚙ Settings → Requirements**:
-   - press **Install** on anything marked as a package or node pack
+   - press **Install** on every row that has the button (gifski, Python packages, node packs)
    - press **Download the … missing for default renders** and wait for the files to finish
    - restart ComfyUI, then press **Check again**: the required rows should all show ✓
 5. Open the **example** subject, go to **Concepts**, pick one and press **Render**. A render takes about 15 minutes on an
@@ -59,8 +58,11 @@ Windows only for now (the terminal uses ConPTY via pywinpty; Recycle Bin and pat
      wait until it's there
 
    [MODELS.md](MODELS.md) lists each file with its size, its direct download link and the ComfyUI folder it goes in.
-2. **[gifski](https://gif.ski)** on PATH, for GIFs: put `gifski.exe` from its download in a folder on PATH, then
-   start Loop Studio again. If you turn GIF off in Outputs, you don't need it.
+2. **[gifski](https://gif.ski)**, which makes the GIFs. The **Install** button in Settings → Requirements gets it for
+   you, into Loop Studio's own `tools/` folder, and it doesn't need Rust. To do it by hand, download
+   [the zip](https://gif.ski/gifski-1.32.0.zip) and copy `win\gifski.exe` from it into a folder on PATH, such as
+   `%LOCALAPPDATA%\Microsoft\WindowsApps`. Don't use its `.msi` or winget: that installer has no PATH entry, so Loop
+   Studio can't find the `gifski` command. If you turn GIF off in Outputs, you don't need it.
 3. **Python 3.12 or newer** for the app itself ([python.org](https://www.python.org/downloads/)); `start.bat` makes
    its venv on first run.
 4. An **agent CLI** on PATH if you want the terminal agent, e.g.
@@ -142,5 +144,7 @@ Loop Studio's own code is under the [MIT License](LICENSE). It doesn't include t
 Third-party:
 
 - [xterm.js](https://github.com/xtermjs/xterm.js) and its fit addon, in `static/vendor/` (MIT, see `static/vendor/LICENSE-xterm.txt`)
+- [gifski](https://gif.ski) (AGPL-3.0 or later) isn't part of this repo: it's a separate program you install, and Loop
+  Studio runs it to make GIFs.
 - Rendering uses [ComfyUI](https://github.com/comfyanonymous/ComfyUI) over its HTTP API, plus MiniMax H3 and the models
   in [MODELS.md](MODELS.md).
