@@ -6,6 +6,11 @@
   </picture>
 </p>
 
+<p align="center">
+  <img src="skill/subjects/example/examples/fishbowl_head_square_102f_fast_00001_.gif" alt="Looping pixel art GIF: a man in a suit with a fishbowl for a head, a goldfish swimming inside" width="380">
+  <img src="docs/harold-typing.gif" alt="Looping GIF: Hide the Pain Harold smiling and typing at his computer" width="380">
+</p>
+
 A local web app for making seamless looping GIFs (memes, reactions, art loops) with **MiniMax H3** on your own **ComfyUI**, with a
 coding agent of your choice built into a terminal drawer.
 
