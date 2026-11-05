@@ -190,11 +190,15 @@ function fillGrid() {
   if (!grid) return;
   const existing = new Map([...grid.children].map(el => [el.dataset.stem, el]));
   const rows = S.data.renders.filter(visible);
-  grid.replaceChildren(...rows.map(r => {
+  // in place, touching only what changed: refilling the whole grid can lose the scroll position and the button in focus
+  let at = grid.firstElementChild;
+  for (const r of rows) {
     const el = existing.get(r.stem) && existing.get(r.stem).dataset.media === mediaKey(r) ? existing.get(r.stem) : cardEl(r);
     updateCard(el, r);
-    return el;
-  }));
+    if (el === at) at = at.nextElementSibling;
+    else grid.insertBefore(el, at);
+  }
+  while (at) { const next = at.nextElementSibling; at.remove(); at = next; }
   document.querySelectorAll("#filters button").forEach(b => $(".muted", b).textContent = filterCount(b.dataset.f));
   const none = $("#no-renders"); if (none) none.hidden = S.data.renders.length > 0;
 }
